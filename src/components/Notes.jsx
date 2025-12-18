@@ -71,7 +71,7 @@ const Notes = () => {
               <ThemeMode />
             </div>
 
-            <input type="text" name="" id="" placeholder='Enter Your Heading Here' className={`inputs p-2 border-solid border-[2px] ${elementsColor == 'white' ? 'border-white text-white' : 'border-black text-black'} w-[90%] flex-1`}  value={heading} maxLength={15} onChange={(e) => {
+            <input type="text" name="" id="" placeholder='Enter Your Heading Here' className={`inputs p-2 border-solid border-[2px] ${elementsColor == 'white' ? 'border-white text-white' : 'border-black text-black'} w-[90%] flex-1 max-md:mt-6`}  value={heading} maxLength={15} onChange={(e) => {
               setHeading(e.target.value);
             }} required />
 
@@ -96,7 +96,7 @@ const Notes = () => {
             <input type="submit" value="Submit" className={`inputs ${elementsColor == 'white' ? 'bg-white text-black' : 'bg-black text-white'}  text-black font-bold p-1 mt-6 w-[90%]`} />
           </div>
         </form>
-        <div className='block-2 min-h-screen flex flex-wrap p-8'>
+        <div className='block-2 min-h-screen flex flex-wrap p-8 max-md:justify-center'>
           {taskDetail.map((e, index) => {
 
             return <div
@@ -104,10 +104,10 @@ const Notes = () => {
               className={`imgg
               text-black text-center pt-4 flex flex-col justify-between
               bg-white rounded-lg transition-all duration-300 p-2
-              ${(e.expanded) || (e.paragraph.length > 20) ? 'h-[300px] w-[200px]' : 'h-[180px] w-[160px]'}
+              ${(e.expanded) || (e.paragraph.length > 20) ? 'h-[300px] w-[210px]' : 'h-[220px] w-[170px]'}
             `} on
             >
-              <div className='flex justify-center items-center mt-4'>
+              <div className='flex justify-center items-center mt-4 p-1'>
                 <h5 className='text-xl font-bold w-[80%]'>{e.heading}</h5>
                 <div className='flex-end relative w-[20%]'><ZoomIn className='hover:scale-85 transition-transform duration-300' size={14} color='#333' onClick={() => {
                   increaseDivLength(index);
