@@ -10,10 +10,3 @@
 .inputs:focus {
     border: 2px solid white;
 }
-
-@media screen and (max-width: 600px) {
-
-    .block-1{
-        grid-template-columns: 1fr;
-    }
-}
