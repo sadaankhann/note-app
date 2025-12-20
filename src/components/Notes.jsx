@@ -67,11 +67,11 @@ const Notes = () => {
         }} className=''>
           <div className='h-[fit-content] flex flex-col p-[min(20px,5vw)] items-center '>
             <div className='flex justify-between w-[90%]  pr-8'>
-              <h1 className={`mb-5 font-bold  text-[clamp(1.2rem,2.5vw,5rem)]`}>Notify</h1>
+              <h1 className={`mb-5 font-bold  text-[clamp(1.5rem,2.5vw,5rem)]`}>Notify</h1>
               <ThemeMode />
             </div>
 
-            <input type="text" name="" id="" placeholder='Enter Your Heading Here' className={`inputs p-2 border-solid border-[2px] ${elementsColor == 'white' ? 'border-white text-white' : 'border-black text-black'} w-[90%] flex-1 max-md:mt-6`}  value={heading} maxLength={15} onChange={(e) => {
+            <input type="text" name="" id="" placeholder='Enter Your Heading Here' className={`inputs p-2 border-solid border-[2px] ${elementsColor == 'white' ? 'border-white text-white' : 'border-black text-black'} w-[90%] flex-1 max-md:p-4`}  value={heading} maxLength={15} onChange={(e) => {
               setHeading(e.target.value);
             }} required />
 
@@ -88,7 +88,7 @@ const Notes = () => {
                   console.log(value.length);
                 }
               }}
-              className={`inputs mt-7 p-15 border-solid border-[2px] ${elementsColor == 'white' ? 'border-white text-white' : 'border-black text-black'}  w-[90%]`}
+              className={`inputs mt-7 p-15 border-solid border-[2px] ${elementsColor == 'white' ? 'border-white text-white' : 'border-black text-black'}  w-[90%] max-md:p-18`}
               required
               rows={4}
             ></textarea>
@@ -102,10 +102,9 @@ const Notes = () => {
             return <div
               key={index}
               className={`imgg
-              text-black text-center pt-4 flex flex-col justify-between
-              bg-white rounded-lg transition-all duration-300 p-2
-              ${(e.expanded) || (e.paragraph.length > 20) ? 'h-[300px] w-[210px]' : 'h-[220px] w-[170px]'}
-            `} on
+              text-black text-center pt-4 flex flex-col justify-between rounded-lg transition-all duration-300 p-2
+              ${(e.expanded) || (e.paragraph.length > 20) ? 'h-[300px] w-[210px]' : 'h-[220px] w-[170px]'} ${Block == "black" ? 'bg-black' : 'bg-white border-[2px] border-dashed'}
+            `}
             >
               <div className='flex justify-center items-center mt-4 p-1'>
                 <h5 className='text-xl font-bold w-[80%]'>{e.heading}</h5>
