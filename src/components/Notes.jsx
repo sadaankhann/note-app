@@ -10,6 +10,7 @@ const Notes = () => {
   const [Block, setBlock] = useState('black');
   const [elementsColor, setElementsColor] = useState('white');
 
+
   useEffect(() => {
     const preDefinedData = JSON.parse(localStorage.getItem('note_data'));
     setTaskDetail(preDefinedData);
@@ -28,7 +29,7 @@ const Notes = () => {
 
     else {
 
-      setTaskDetail([...taskDetail, { heading: heading, paragraph: paragraph, expanded: false }]);
+      setTaskDetail([...taskDetail, { heading: heading, paragraph: paragraph, expanded: false , theme : Theme}]);
 
       setHeading("");
       setParagraph("");
