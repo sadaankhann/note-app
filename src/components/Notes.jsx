@@ -29,7 +29,7 @@ const Notes = () => {
 
     else {
 
-      setTaskDetail([...taskDetail, { heading: heading, paragraph: paragraph, expanded: false , theme : Theme}]);
+      setTaskDetail([...taskDetail, { heading: heading, paragraph: paragraph, expanded: false}]);
 
       setHeading("");
       setParagraph("");
