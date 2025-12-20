@@ -97,7 +97,7 @@ const Notes = () => {
             <input type="submit" value="Submit" className={`inputs ${elementsColor == 'white' ? 'bg-white text-black' : 'bg-black text-white'}  text-black font-bold p-1 mt-6 w-[90%]`} />
           </div>
         </form>
-        <div className='block-2 min-h-screen flex flex-wrap p-8 max-md:justify-center'>
+        <div className='block-2 flex flex-wrap p-8 max-md:justify-center gap-10 max-md:gap-2'>
           {taskDetail.map((e, index) => {
 
             return <div
