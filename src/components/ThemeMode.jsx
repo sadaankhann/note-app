@@ -27,8 +27,6 @@ const ThemeMode = () => {
 
   useEffect(() => {
 
-    // (Block == 'white') ? setElementsColor('black') || setIconTheme('black') : setElementsColor('white') || setIconTheme('white');
-
     if (Block == 'white'){
 
       setElementsColor('black');
